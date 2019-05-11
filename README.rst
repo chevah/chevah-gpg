@@ -5,7 +5,7 @@ Chevah GnuPG distribution
 Build the Python Package
 ------------------------
 
-The Python package contains for now the Linux and Windows Executable.
+The Python package contains for now the Linux and Windows Executable::
 
     $ ./build.sh
     $ python setup.py publish
