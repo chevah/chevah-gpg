@@ -1,3 +1,8 @@
+DEFAULT_VALUES
+build-*/*
+cache/*
+dist/
+
 # Prerequisites
 *.d
 
