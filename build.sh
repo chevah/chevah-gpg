@@ -1,4 +1,5 @@
 # Build from source for Linux.
+mkdir -p build
 cd gnupg
 make clean
 ./configure \
@@ -22,10 +23,22 @@ make clean
     --disable-regex \
     --enable-noexecstack
 make
-cp g10/gpg ../build/
+os_name=`uname -s`
+
+if [ "$os_name" = "Linux" ]
+then
+    cp g10/gpg ../build/gpg1-linux-x64
+elif [ "$os_name" = "Darwin" ]
+then
+    cp g10/gpg ../build/gpg1-macos
+else
+    echo 'OS not supported:' $os_name
+    exit 1
+fi
+
 make distclean
 
 # Copy the Windows files.
 cd ../
-cp gnupg-win/gpg.exe build/
+cp gnupg-win/gpg.exe build/gpg1.exe
 cp gnupg-win/iconv.dll build/

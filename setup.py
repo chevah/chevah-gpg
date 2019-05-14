@@ -7,7 +7,7 @@ import os
 NAME = 'chevah-gpg'
 MODULE_NAME = 'chevah_gpg'
 VERSION = '1.4.23'
-CHEVAH_VERSION = '.chevah1'
+CHEVAH_VERSION = '.chevah3'
 WEBSITE = 'https://gnupg.org/'
 AUTHOR = 'OpenPG Contributors'
 LICENSE = 'GPL 3+'
@@ -52,8 +52,10 @@ setup(
     namespace_packages=['chevah'],
     packages=['chevah', 'chevah.' + MODULE_NAME],
     scripts=[
-        'build/gpg',
-        'build/gpg.exe',
+        'build/gpg1-linux-x64',
+        'build/gpg1-macos',
+        'build/gpg1-openbsd',
+        'build/gpg1.exe',
         'build/iconv.dll',
         ],
     cmdclass={
