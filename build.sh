@@ -40,5 +40,5 @@ make distclean
 
 # Copy the Windows files.
 cd ../
-cp gnupg-win/gpg.exe build/gpg1.exe
-cp gnupg-win/iconv.dll build/
+cp gnupg-win/gpg.exe chevah/chevah_gpg/gpg1.exe
+cp gnupg-win/iconv.dll chevah/chevah_gpg/

@@ -3,6 +3,8 @@ build-*/*
 cache/*
 dist/
 
+chevah/chevah_gpg/gpg1-*
+
 # Prerequisites
 *.d
 
