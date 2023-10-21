@@ -29,6 +29,8 @@
 /* Norcraft can't cope with common symbols */
 #if defined (__riscos__) && !defined (INCLUDED_BY_MAIN_MODULE)
 #define EXTERN_UNLESS_MAIN_MODULE extern
+#elif defined (__GNUC__) && __GNUC__ >= 10
+#define EXTERN_UNLESS_MAIN_MODULE __attribute__((__common__))
 #else
 #define EXTERN_UNLESS_MAIN_MODULE
 #endif

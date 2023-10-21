@@ -12,6 +12,9 @@ curl -v -o gnupg.tar.bz2 \
     https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-$VERSION.tar.bz2
 tar -xjf gnupg.tar.bz2
 mv gnupg-$VERSION ../gnupg
+cd ../gnupg
+wget -O https://sources.debian.org/data/main/g/gnupg1/1.4.23-1.1/debian/patches/0006-fix-for-gcc10.patch
+git apply 0006-fix-for-gcc10.patch
 
 # Get Windows compiled files.
 rm -rf gnupg-w32cli.exe
