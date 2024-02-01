@@ -7,7 +7,7 @@ import os
 NAME = 'chevah-gpg'
 MODULE_NAME = 'chevah_gpg'
 VERSION = '1.4.23'
-CHEVAH_VERSION = '.chevah4'
+CHEVAH_VERSION = '+chevah.6'
 WEBSITE = 'https://gnupg.org/'
 AUTHOR = 'OpenPG Contributors'
 LICENSE = 'GPL 3+'

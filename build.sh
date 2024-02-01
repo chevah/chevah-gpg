@@ -27,6 +27,8 @@ os_name=`uname -s`
 
 if [ "$os_name" = "Linux" ]
 then
+    # FIXME:
+    # On ARM64 this should be renamed to gpg1-linux-arm64
     cp g10/gpg ../build/gpg1-linux-x64
 elif [ "$os_name" = "Darwin" ]
 then
